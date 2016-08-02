@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
   <link href="css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" type="css/bamcss.css" href="bamcss.css">
   <title>Gig-Goers</title>
@@ -71,7 +76,27 @@
       </ul>
       <!-- Log in and sign up function-->
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="mab.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      
+      <!-- Log in popup -->
+        <div data-role="main" class="ui-content">
+          <a href="#myPopup" data-rel="popup" class="glyphicon glyphicon-log-in">Login</a>
+
+          <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+            <form method="post" action="demoform.asp">
+              <div>
+                <h3>Login information</h3>
+                <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+                <input type="text" name="user" id="usrnm" placeholder="Username">
+                <label for="pswd" class="ui-hidden-accessible">Password:</label>
+                <input type="password" name="passw" id="pswd" placeholder="Password">
+                <label for="log">Keep me logged in</label>
+                <input type="checkbox" name="login" id="log" value="1" data-mini="true">
+                <input type="submit" data-inline="true" value="Log in">
+              </div>
+            </form>
+          </div>
+        </div>
+
         <li><a href="signup.html"><span class="glyphicon glyphicon-log-in"></span> Sign Up</a></li>
       </ul>
     </div>

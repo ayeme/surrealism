@@ -1,4 +1,4 @@
-if(password == passwordConfirm)
+if(password == password_confirm)
 {
 	return true;
 }

@@ -1,0 +1,83 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="bamcss.css">
+	<center>
+	<h1>Pick Genre</h1>
+</center>
+</head>
+
+<body>
+<center>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" /></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('input[name="all"],input[name="title"]').bind('click', function(){
+var status = $(this).is(':checked');
+$('input[type="checkbox"]', $(this).parent('li')).attr('checked', status);
+});
+});
+</script>
+
+<div id="wrapper">
+ <li style="margin-top: 20px">
+  <input type="checkbox" name="all" id="all" /> <label for='all'>All</label>
+  <ul>
+   <li><input type="checkbox" name="title" id="title_1" /> <label for="title_1"><strong>Alternative/Indie</strong></label>
+    <ul>
+     <li><input type="checkbox" name="selected[]" id="box_1" value="1" /> <label for="box_1">Bon Iver</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_2" value="2" /> <label for="box_2">Mumford and Sons</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_3" value="3" /> <label for="box_3">The Strokes</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_4" value="4" /> <label for="box_4">The Vampire Weekend</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_5" value="5" /> <label for="box_5">City and Colour</label></li>
+   </ul>
+   </li>
+   </ul>
+
+   <ul>
+   <li><input type="checkbox" name="title" id="title_2" /> <label for="title_2"><strong>Hip Hop/Rap</strong></label>
+    <ul>
+     <li><input type="checkbox" name="selected[]" id="box_21" value="21" /> <label for="box_21">Kanye West</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_22" value="22" /> <label for="box_22">Drake</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_23" value="23" /> <label for="box_23">Kendrick Lamar</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_24" value="24" /> <label for="box_24">J.Cole</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_25" value="25" /> <label for="box_25">A$AP Rocky</label></li>
+    </ul>
+    </li>
+    </ul>
+
+   <ul>
+   <li><input type="checkbox" name="title" id="title_3" /> <label for="title_3"><strong>Electronic</strong></label>
+   <ul>
+     <li><input type="checkbox" name="selected[]" id="box_31" value="31" /> <label for="box_31">Honne</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_32" value="32" /> <label for="box_32">Flume</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_33" value="33" /> <label for="box_33">ODESZA</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_34" value="34" /> <label for="box_34">The Chainsmokers</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_35" value="35" /> <label for="box_35">Chet Faker</label></li>
+    </ul>
+    </li>
+    </ul>
+
+   <ul>
+   <li><input type="checkbox" name="title" id="title_4" /> <label for="title_4"><strong>Pop</strong></label>
+   <ul>
+     <li><input type="checkbox" name="selected[]" id="box_41" value="41" /> <label for="box_41">Adele</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_42" value="42" /> <label for="box_42">Sia</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_43" value="43" /> <label for="box_43">Bruno Mars</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_44" value="44" /> <label for="box_44">Coldplay</label></li>
+     <li><input type="checkbox" name="selected[]" id="box_45" value="45" /> <label for="box_45">Ed Sheeran</label></li>
+    </ul>
+    </li>
+    </ul>
+    <div class="control-group">
+      <!-- Button -->
+    <div class="controls">
+      <center><a class = "button" id="location" href = "file:///C:/Users/codergirl/Dropbox/BAMgigs/location.html">Next</a></center>
+    </div>
+    </div>
+   
+</div>
+</center>
+</body>
+</html>

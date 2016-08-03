@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="bamcss.css">
-  <script src="jascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bamcss.css">
 	<title>Sign Up</title>
 </head>
 <body>
+<script type = "text/javascript" src="jascript.js"></script>
 	<center>
 		<h1>Sign Up</h1> 
 		
 	<form class="form-horizontal" action='' method="POST">
 
       <!-- E-mail -->
-      <label class="control-label" for="email">E-mail</label>
       <div class="controls">
-        <input type="text" id="email" name="email" placeholder="" class="input-xlarge">
+        <input type="text" id="email" placeholder="E-Mail"">
         <p class="help-block">Please type your E-mail</p>
       </div>
     </div>
- 
     <div class="control-group">
       <!-- Password-->
-      <label class="control-label" for="password">Password</label>
       <div class="controls">
-        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+        <input type="password" id="password" placeholder="Password...">
         <p class="help-block">Password should be at least 4 characters</p>
       </div>
     </div>
  
     <div class="control-group">
       <!-- Confirm Password -->
-      <label class="control-label"  for="password_confirm">Confirm Password</label>
-      <div class="controls">
-        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+      <div>
+        <input type="password" id="password_confirm" placeholder="Confirm Password...">
         <p class="help-block">Please confirm password</p>
       </div>
     </div>
- 
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <center><a class = "button" id="genre" href = "file:///C:/Users/codergirl/Documents/surrealism/newgenre.html">Next</a></center>
+        <center><button class = "button" onclick="passCheck()">next part 2</button><a class = "button" id="genre" onclick= "passCheck()"  href = "file:///C:/Users/codergirl/Documents/surrealism/newgenre.html">Next</a></center>
       </div>
     </div>
-
-</form>
+  </form>
 </center>
 </body>
 </html>

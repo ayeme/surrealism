@@ -1,17 +1,17 @@
-var x = document.getElementbyId("password");
-var y = document.getElementbyId("passConfirm");
-
-if (x != y)
+function passCheck()
 {
-<<<<<<< HEAD
-	return true;
+	var x = document.getElementById("pass_word").innerHTML;
+	var y = document.getElementById("password_confirm").innerHTML;
+	console.log(x)
+	if (x != y)
+	{
+		alert("Your passwords do not match. Try again.");
+	}
+	else
+	{
+
+	}
 }
 
-=======
-	window.alert("Your passwords do not match");
-}
-else
-{
-	window.alert("Good job!")
-}
->>>>>>> ecab7bfd14980abd6777bf0eb97b906d6e2066b2
+
+var input = document.getElementById("userInput").value;

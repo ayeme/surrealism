@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
 =======
 <<<<<<< HEAD
@@ -10,8 +11,13 @@ body{
 >>>>>>> ec67570d48d73e4d06fe836099ad30970f5103fc
 >>>>>>> aa8b580cb8a55a0d05b403eefe2a264f26551ae7
 
+=======
+body{
+    background-color: #EBEBEB;
+}
+>>>>>>> b9ad36ab7f09a316989e4277b419f7219c0da854
 .button{
-	background-color: #FF8A56;
+	background-color: #6495ED;
     border: none;
     border-radius: 25px;
     color: white;
@@ -39,6 +45,7 @@ ul{
 }
 h1{
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }*/
 
@@ -91,3 +98,16 @@ body {
 =======
 }
 >>>>>>> aa8b580cb8a55a0d05b403eefe2a264f26551ae7
+=======
+}
+h3{
+    font-size: 15px;
+}
+<<<<<<< HEAD
+>>>>>>> b9ad36ab7f09a316989e4277b419f7219c0da854
+=======
+h4{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+>>>>>>> 2ca7e882dd5cb653c2ea0931a4f6102d1397bf57

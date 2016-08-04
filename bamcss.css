@@ -17,7 +17,7 @@ body{
 }
 >>>>>>> b9ad36ab7f09a316989e4277b419f7219c0da854
 .button{
-	background-color: #FF8A56;
+	background-color: #6495ED;
     border: none;
     border-radius: 25px;
     color: white;
@@ -103,4 +103,11 @@ body {
 h3{
     font-size: 15px;
 }
+<<<<<<< HEAD
 >>>>>>> b9ad36ab7f09a316989e4277b419f7219c0da854
+=======
+h4{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+>>>>>>> 2ca7e882dd5cb653c2ea0931a4f6102d1397bf57

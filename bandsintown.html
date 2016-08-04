@@ -1,4 +1,4 @@
-<html>
+:L<zAXQWASDl,<html>
 <head>
 	<title>api</title>
 </head>
@@ -6,10 +6,11 @@
 	Next show: <p id="demo"></p>
 	<image id="image" src="">
 
-
+	<script type="text/javascript" src="jascript.js"></script>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript">
-		var artistName = "tame%20impala"				  // Notice you have to use "%20" instead of a space. It's called double escaped text. Look it up.
+		var bandInput = bandSearch();
+		var artistName = input.innerHTML;	  // Notice you have to use "%20" instead of a space. It's called double escaped text. Look it up.
 		var url = "http://api.bandsintown.com/artists/" + // This is the base url.
 				  artistName +							  // Add artist name
 				  "?app_id=giggoers&api_version=2.0&format=json&callback=?" // This is tells BIT who you are (api_id) and what format you want (JSON)
@@ -26,8 +27,6 @@
   			console.log(response);
   			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
 		})
-
-
 		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
 		$.getJSON(locationEvents, function(response) {
   			console.log(response);

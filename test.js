@@ -1,0 +1,1 @@
+http://your-redirect-uri#access_token=ACCESS-TOKEN

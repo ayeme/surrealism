@@ -7,10 +7,6 @@ function passCheck()
 	{
 		alert("Your passwords do not match. Try again.");
 	}
-	else
-	{
-
-	}
 }
 
 

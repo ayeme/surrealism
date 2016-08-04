@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-
-=======
 body{
     background-color: #EBEBEB;
 }
->>>>>>> ec67570d48d73e4d06fe836099ad30970f5103fc
-
 .button{
 	background-color: #FF8A56;
     border: none;
@@ -35,4 +30,7 @@ ul{
 }
 h1{
     font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    font-size: 15px;
 }

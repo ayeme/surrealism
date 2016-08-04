@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>insta</title>
+</head>
+<body>
+	<script src="jquery.js"></script>
+
+	<script type="text/javascript">
+		var access_token = window.location.hash.substr(1);
+		console.log(access_token); 
+		var user_id = "hapastudent";
+		var url = "https://api.instagram.com/v1/tags/girlswhocode/media/recent?"+access_token+"&callback=?";
+		console.log(url);
+		$.getJSON(url, function(data) {
+			console.log(data);
+		});
+		// console.log(foo);
+		// document.getElementById("button").href = "https://api.instagram.com/v1/tags/girlswhocode/media/recent?access_token=" + foo;
+
+	</script>
+</body>
+</html>

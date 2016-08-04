@@ -26,7 +26,10 @@
 						"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 		$.getJSON(eventsURL, function(response) {
   			console.log(response);
-  			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
+  			for(int i = 0; i < response.length; i++)
+  			{
+  				document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;  
+  			} 			
 		})
 		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
 		$.getJSON(locationEvents, function(response) {

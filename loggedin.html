@@ -7,11 +7,40 @@
   <title>Gig-Goers</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script type="text/javascript" src="jascript.js"></script>
+
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="jascript.js"></script>
 
+
 </head>
 <body>
+
+<img id="instapic">
+
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+  var access_token = window.location.hash.substr(1);
+  console.log(access_token);
+  var url = "https://api.instagram.com/v1/users/self/media/recent/?"+access_token+"&count=5&callback=?";
+
+  // var url = "https://api.instagram.com/v1/tags/music/media/recent?access_token=24250345.1677ed0.949e9cf614e24f1d9d738e231e3ee692&count=5&callback=?";
+
+
+  console.log(url);
+  $.getJSON(url, function(response) {
+    console.log(response);
+
+    document.getElementById("instapic").src = response.data[0].images.standard_resolution.url;
+  });
+
+</script>
+
+
+ <!--NAVIGATION BAR -->
 
 <nav>
   <ul class="nav navbar-nav">
@@ -34,12 +63,13 @@
 <div class="container">
     <div class="row">
 
+
     </div>
 </div>
 
   <!-- nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
       <button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> -->
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/bamcss.css">
   <title>Gig-Goers</title>
    <!--  Log in/Sign in buttons -->
@@ -86,6 +116,9 @@
     <div class="col-md-4">
 <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BIa8U9dBaCZ/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Justin Bieber (@justinbieber)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-07-28T21:54:48+00:00">Jul 28, 2016 at 2:54pm PDT</time></p></div></blockquote>
 <script async defer src="https://platform.instagram.com/en_US/embeds.js"></script>
+
+
+
 </div>
 </div>
 </div>

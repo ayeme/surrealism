@@ -34,7 +34,7 @@
   $.getJSON(url, function(response) {
     console.log(response);
 
-    document.getElementById("instapic").src = response.data[0].link;
+    document.getElementById("instapic").src = "https://instagram.com/p/"+response.data[0].id+"media/?size=m";
   });
 
 </script>

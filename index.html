@@ -23,7 +23,10 @@
 <script type="text/javascript">
   var access_token = window.location.hash.substr(1);
   console.log(access_token);
-  var url = "https://api.instagram.com/v1/tags/music/media/recent?"+access_token+"&count=5&callback=?";
+  // var url = "https://api.instagram.com/v1/tags/music/media/recent?"+access_token+"&count=5&callback=?";
+
+  var url = "https://api.instagram.com/v1/tags/music/media/recent?access_token=24250345.1677ed0.949e9cf614e24f1d9d738e231e3ee692&count=5&callback=?";
+
 
   console.log(url);
   $.getJSON(url, function(data) {

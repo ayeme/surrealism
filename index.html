@@ -31,10 +31,10 @@
 
 
   console.log(url);
-  $.getJSON(url, function(data) {
-    console.log(data);
+  $.getJSON(url, function(response) {
+    console.log(response);
 
-    document.getElementById("instapic").src = data[0].link;
+    document.getElementById("instapic").src = response.data[0].link;
   });
 
 </script>

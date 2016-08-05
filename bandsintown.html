@@ -1,11 +1,11 @@
 <zAXQWASDl,<html>
 	<link rel="stylesheet" type="text/css" href="bamcss.css">
 <head>
-	<title>api</title>
+	<title>Search Artist</title>
 </head>
 <center>
 <body>
-	<h4>Search an artist to find their next show:</h4><p id="demo"></p>
+	<h4>Search an artist to find all shows:</h4><p id="demo"></p>
 	<image id="image" src="">
 
 	<!-- <script type="text/javascript" src="jascript.js"></script> -->
@@ -22,18 +22,23 @@
 			console.log(response);
   			document.getElementById("image").src = response.image_url;
 		})
+		var str = "";
 
 		var eventsURL = "http://api.bandsintown.com/artists/" + 
 						artistName + 
 						"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 		$.getJSON(eventsURL, function(response) {
   			console.log(response);
-  			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
+  			for (i=0;i<response.length;i++)
+  			{
+  				str += response[0].formatted_datetime + "<br>" + response[0].formatted_location;
+  			}
+  			document.getElementById("demo").innerHTML = str;    			
 		})
-		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
+		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=" + artistName + "&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
 		$.getJSON(locationEvents, function(response) {
   			console.log(response);
-  			// document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
+  			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
 		})
 
 	</script>
@@ -54,18 +59,22 @@ function bandSearch()
 			console.log(response);
   			document.getElementById("image").src = response.image_url;
 		})
-
+		var str = "";
 		var eventsURL = "http://api.bandsintown.com/artists/" + 
 						input + 
 						"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 		$.getJSON(eventsURL, function(response) {
   			console.log(response);
-  			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
+  			// for (i = 0; i < response.length; i++)
+  			// {
+  			// 	str += response[i].formatted_datetime + "<br>" + response[i].formatted_location + "<br>";
+  			// }
+  			// document.getElementById("demo").innerHTML = str;   			
 		})
-		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
+		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=" + artistName + "&location=Chicago,IL&radius=10&format=json&app_id=giggoers&callback=?"
 		$.getJSON(locationEvents, function(response) {
   			console.log(response);
-  			// document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
+  			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
 		})
 
 
@@ -84,13 +93,11 @@ function bandSearch()
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
+</center>
 </body>
-
 </html>
-
-<!-- http://api.bandsintown.com/artists/Skrillex/events/search.json?api_version=2.0&app_id=YOUR_APP_ID&location=San+Diego,CA&radius=10
-
- -->
-
+</body>
+</html>
+</html>
 </center>
 </html>

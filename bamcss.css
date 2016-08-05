@@ -1,4 +1,84 @@
+<<<<<<< HEAD
 
+.button{
+    background-color: #FF8A56;
+=======
+body{
+    background-color: #EBEBEB;
+}
+.button{
+	background-color: #6495ED;
+>>>>>>> c46ccf468660f388cbf79ec4f869c456ee2cbd7a
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    top:50%;
+    left:50%;
+    font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
+=======
+}
+ul{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+
+>>>>>>> c46ccf468660f388cbf79ec4f869c456ee2cbd7a
+}
+/*#login.button{
+    position:relative;
+    left:1100px;
+    }
+
+#signup.button{
+    position: relative;
+    left:1100px;
+}*/
+body {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.sidebar-nav-fixed {
+    width:20%;
+    position: fixed;
+    top: 30px;
+    height: 132px;
+    left: 0;
+<<<<<<< HEAD
+
+}
+
+h3{
+    font-size: 15px;
+}
+
+=======
+}
+h3{
+    font-size: 15px;
+}
+>>>>>>> c46ccf468660f388cbf79ec4f869c456ee2cbd7a
+h4{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+<<<<<<< HEAD
+
+img instapic {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+=======
+/*
+makes the buttons pink
 .button{
     background-color: #FF8A56;
     border: none;
@@ -12,49 +92,5 @@
     top:50%;
     left:50%;
     font-family: Arial, Helvetica, sans-serif;
-}
-#login.button{
-    position:relative;
-    left:1100px;
-    }
-
-#signup.button{
-    position: relative;
-    left:1100px;
-}
-ul{
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-}
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    padding-bottom: 40px;
-    padding-top: 60px;
-}
-
-.sidebar-nav-fixed {
-    width:20%;
-    position: fixed;
-    top: 30px;
-    height: 132px;
-    left: 0;
-
-}
-
-h3{
-    font-size: 15px;
-}
-
-h4{
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-img instapic {
-    display: block;
-    margin: auto;
-    width: 40%;
-}
+}*/
+>>>>>>> c46ccf468660f388cbf79ec4f869c456ee2cbd7a

@@ -28,12 +28,12 @@
 						artistName + 
 						"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 		$.getJSON(eventsURL, function(response) {
-  			// console.log(response);
-  			// for (i=0;i<response.length;i++)
-  			// {
-  			// 	str += response[0].formatted_datetime + "<br>" + response[0].formatted_location;
-  			// }
-  			// document.getElementById("demo").innerHTML = str;    			
+  			console.log(response);
+  			for (i=0;i<response.length;i++)
+  			{
+  				str += response[0].formatted_datetime + "<br>" + response[0].formatted_location;
+  			}
+  			document.getElementById("demo").innerHTML = str;    			
 		})
 		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=" + artistName + "&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
 		$.getJSON(locationEvents, function(response) {
@@ -64,17 +64,17 @@ function bandSearch()
 						input + 
 						"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 		$.getJSON(eventsURL, function(response) {
-  			// console.log(response);
+  			console.log(response);
   			// for (i = 0; i < response.length; i++)
   			// {
   			// 	str += response[i].formatted_datetime + "<br>" + response[i].formatted_location + "<br>";
   			// }
   			// document.getElementById("demo").innerHTML = str;   			
 		})
-		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
+		var locationEvents = "http://api.bandsintown.com/events/search?artists[]=" + artistName + "&location=Chicago,IL&radius=10&format=json&app_id=giggoers&callback=?"
 		$.getJSON(locationEvents, function(response) {
   			console.log(response);
-  			// document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
+  			document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location;   			
 		})
 
 

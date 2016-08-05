@@ -32,7 +32,8 @@
 
   console.log(url);
   $.getJSON(url, function(data) {
-    console.log(data);
+    console.log(data[0].link);
+
     document.getElementById("instapic").src = data[0].link;
   });
 

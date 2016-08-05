@@ -33,3 +33,17 @@ function bandSearch()
 
 }
 
+// function validate()
+// {
+//     if(   document.getElementById("textone").value == "workshop"
+//        && document.getElementById("texttwo").value == "workshop" )
+//     {
+//         alert( "You're logged in.");
+//         location.href="loggedin.html";
+//     }
+//     else
+//     {
+//         alert( "Your password is incorrect. Try again");
+//         location.href="newmab.html";
+//     }
+// }

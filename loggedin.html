@@ -27,7 +27,7 @@
     console.log(response);  
 
     console.log(response.data[0].images.standard_resolution.url);
-    var html_thing="<div class='col-md-4'>" + "<img src='"+response.data[0].images.standard_resolution.url+"'> </div>"
+    var html_thing="<div class='col-md-3'>" + "<img src='"+response.data[0].images.standard_resolution.url+"'> </div>"
     //document.getElementById("instapic").src = response.data[0].images.standard_resolution.url;
     document.getElementById("uploadedpic").innerHTML=html_thing
     console.log("HEHEHEH");

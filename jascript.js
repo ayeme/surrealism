@@ -1,16 +1,16 @@
-function passCheck()
-{
+function passCheck(){
+
 	var x = document.getElementById("pass_word").innerHTML;
 	var y = document.getElementById("password_confirm").innerHTML;
-	// if (x.length < 4)
-	// {
-	// 	alert("Your password is not long enough");
-	// }
-	if (x != y)
+	if (x.length < 4)
 	{
-		alert("Your passwords do not match. Try again.");
+		alert("Your password is not long enough");
 	}
-}
+	// if (x != y)
+	// {
+	// 	alert("Your passwords do not match. Try again.");
+	// }
+ }
 
 
 function bandSearch() 

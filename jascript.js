@@ -20,4 +20,3 @@ function bandSearch()
 	return input;
 
 }
-

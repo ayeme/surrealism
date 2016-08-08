@@ -32,9 +32,16 @@
 			var url = "http://api.bandsintown.com/artists/" + // This is the base url.
 					  input +							  // Add artist name
 					  "/events/recommended?app_id=giggoers&api_version=2.0&"+"location=use_geoip&radius=150"+"&format=json&callback=?" // This is tells BIT who you are (api_id) and what format you want (JSON)
+
 			console.log(url)
+			var str="";
 			$.getJSON(url, function(response) {
 				console.log(response);
+				for (i = 0; i < response.length; i++)
+	  			{
+	  				str += response[i].title + "<br>" + response[i].formatted_location + "<br>";
+	  			}
+	  			document.getElementById("demo").innerHTML = str; 
 	  			//document.getElementById("image").src = response.image_url;
 			})
 			var str = "";

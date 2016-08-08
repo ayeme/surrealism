@@ -12,7 +12,6 @@ function passCheck(){
 	}
  }
 
-
 function bandSearch() 
 {
 

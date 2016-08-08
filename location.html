@@ -1,18 +1,78 @@
-<html>
-<head>
+<zAXQWASDl,<html>
 <link rel="stylesheet" type="text/css" href="bamcss.css">
+
+<head>
+<title>Search Artist</title>
 </head>
 
 <body>
 <center>
-	<h1>Location</h1>
-		<p class="help-block">Type location to find concerts in area.</p>
-		<form class="pull-xs-right">
-	    <input type="text" class="form-control" placeholder="Search...">
-	    </form>
-<div class="controls">
-	<a class = "button" id="submit" href = "newmab.html">Finish</a>
-</div>
+	<h4>Find concerts in your area.</h4>
+	<p id="demo"></p>
+	<image id="image" src="">
+
+	<!-- <script type="text/javascript" src="jascript.js"></script> -->
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		input = document.getElementById("userInput").value;
+		//var bandInput = bandSearch();
+		var townname = input;	  // Notice you have to use "%20" instead of a space. It's called double escaped text. Look it up.
+	</script>
+	<script type="text/javascript">
+	function bandSearch() 
+	{
+
+		input = document.getElementById("userInput").value;
+		input_2=document.getElementById("townname").value;
+		input_3=document.getElementById("state").value;
+		console.log(input)
+		//
+			//var bandInput = bandSearch();
+			//var artistName = input.innerHTML;	  // Notice you have to use "%20" instead of a space. It's called double escaped text. Look it up.
+			var url = "http://api.bandsintown.com/artists/" + // This is the base url.
+					  input +							  // Add artist name
+					  "/events/search?app_id=giggoers&api_version=2.0&"+"location="+input_2+","+input_3+"format=json&callback=?" // This is tells BIT who you are (api_id) and what format you want (JSON)
+			console.log(url)
+			$.getJSON(url, function(response) {
+				console.log(response);
+	  			document.getElementById("image").src = response.image_url;
+			})
+			var str = "";
+			var eventsURL = "http://api.bandsintown.com/artists/" + 
+							input + 
+							"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
+			$.getJSON(eventsURL, function(response) {
+	  			console.log(response);
+	  			for (i = 0; i < response.length; i++)
+	  			{
+	  				str += response[i].formatted_datetime + "<br>" + response[i].formatted_location + "<br>";
+	  			}
+	  			document.getElementById("demo").innerHTML = str;   			
+			})
+			var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
+			$.getJSON(locationEvents, function(response) {
+	  			console.log(response);
+	  			//document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location; 			
+			})	
+			
+
+		return input;
+	}
+	</script>
+
+	<div class="row"> 
+	<div class="col-lg-6">
+    <div class="input-group">
+    	<input type="text" class="form-control" placeholder="Search for..." id="userInput">
+      <input type="text" class="form-control" placeholder="Search for..." id="townname">
+      <input type="text" class="form-control" placeholder="Search for..." id="state">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="bandSearch()">Go!</button>
+      </span>
+    </div><!-- /input-group -->
+  	</div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+
 </center>
 </body>
 

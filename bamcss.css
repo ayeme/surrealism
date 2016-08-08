@@ -1,0 +1,88 @@
+.button{
+    background-color: #FF8A56;
+}
+body{
+    background-color: #EBEBEB;
+}
+.button{
+	background-color: #6495ED;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    top:50%;
+    left:50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*#login.button{
+    position:relative;
+    left:1100px;
+    }
+
+#signup.button{
+    position: relative;
+    left:1100px;
+}*/
+body {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.sidebar-nav-fixed {
+    width:20%;
+    position: fixed;
+    top: 30px;
+    height: 132px;
+    left: 0;
+}
+
+h3{
+    font-size: 15px;
+}
+h4{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+img instapic {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+.nav{
+    background-color:#002d60;
+}
+/*
+makes the buttons pink
+.button{
+    background-color: #FF8A56;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    top:50%;
+    left:50%;
+    font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
+<<<<<<< HEAD
+}*/
+
+.navbar{
+    background-color:000033;
+}
+=======
+}*/
+>>>>>>> 2390e5ccb3877636fa73967039f15e42913bef00

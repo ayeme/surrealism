@@ -20,7 +20,7 @@
 
   // var url = "https://api.instagram.com/v1/tags/music/media/recent?access_token=24250345.1677ed0.949e9cf614e24f1d9d738e231e3ee692&count=5&callback=?";
 
-function uploadPicture(){
+//function uploadPicture(){
   console.log(url);
   $.getJSON(url, function(response) {
     alert("EEEE")
@@ -31,8 +31,8 @@ function uploadPicture(){
     document.getElementById("instapic").src = response.data[0].images.standard_resolution.url;
     document.getElementById("uploadedpic").innerHTML=html_thing
     console.log("HEHEHEH");
-  });
-}
+ });
+
 </script>
 
  <!--NAVIGATION BAR -->
@@ -43,8 +43,8 @@ function uploadPicture(){
         <a class = "nav-link" id="logout" href = "index.html">Log Out<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class = "nav-link" id="upload pictures" href="https://instagram.com/oauth/authorize/?client_id=157c316671b84fe6ab699bc2937f6ad4&redirect_uri=https://ayeme.github.io/surrealism/loggedin.html&response_type=token&scope=basic" onclick="uploadPicture()">Upload Photo</a>
-      </li>
+        <a class = "nav-link" id="upload pictures" href="https://instagram.com/oauth/authorize/?client_id=157c316671b84fe6ab699bc2937f6ad4&redirect_uri=https://ayeme.github.io/surrealism/loggedin.html&response_type=token&scope=basic">Upload Photo</a>
+      </li>login
     </ul>
     <div>
       <form class="form-inline pull-xs-right">

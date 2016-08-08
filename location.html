@@ -39,7 +39,7 @@
 				console.log(response);
 				for (i = 0; i < response.length; i++)
 	  			{
-	  				str += response[i].title + "<br>" + response[i].formatted_location + "<br>";
+	  				str += response[i].title + "<br>" + response[i].formatted_location + "<br>" + response[i].formatted_datetime + "<br>";
 	  			}
 	  			document.getElementById("demo").innerHTML = str; 
 	  			//document.getElementById("image").src = response.image_url;
@@ -52,7 +52,7 @@
 	  			console.log(response);
 	  			for (i = 0; i < response.length; i++)
 	  			{
-	  				str += response[i].formatted_datetime + "<br>" + response[i].formatted_location + "<br>" response[i].formatted_location + "<br>" + response[i].formatted_datetime + "<br>";
+	  				str += response[i].formatted_datetime + "<br>" + response[i].formatted_location + "<br>";
 	  			}
 	  			// document.getElementById("demo").innerHTML = str;   			
 			})

@@ -1,78 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <link rel="stylesheet" type="text/css" href="bamcss.css">
 	<title>Sign Up</title>
-
-
-
-  <script type="text/javascript"></script>
-  <script type="text/javascript" src="firebase.js">
-      function login() {
-        var keyUser = document.getElementById("email").value;
-        var keyPassword = document.getElementById("pass_word").value;
-        console.log(keyUser + " " + keyPassword);
-
-        var ref = new Firebase("https://gig-goers.firebaseio.com");
-        ref.createUser({
-          email: keyUser,
-          password: keyPassword
-        }, function(error, userData) {
-          if (error) {
-            switch (error.code) {
-              case "EMAIL_TAKEN":
-                console.log("The new user account cannot be created because the email is already in use.");
-                break;
-              case "INVALID_EMAIL":
-                console.log("The specified email is not a valid email.");
-                break;
-              default:
-                console.log("Error creating user:", error);
-            }
-          } else {
-            console.log("Successfully created user account with uid:", userData.uid);
-          }
-        });
-      }
-
-
-    
-
-    
-    
-    function loginSave() {
-      var users ={};
-      var keyUser = document.getElementById("email").value;
-      var keyPassword = document.getElementById("pass_word").value;
-
-      users.keyUser = keyPassword;
-
-      console.log(users);
-    }
-
-    function log() {
-      console.log("printadfadfa");
-    }
-  </script>
-  
-<script>
-  // Initialize Firebase
-  
-var config = {
-      apiKey: "AIzaSyCgfOakMt42d8PkYCJ5VZr6E4U8orGdx_M",
-      authDomain: "gig-goers.firebaseapp.com",
-      databaseURL: "https://gig-goers.firebaseio.com",
-      storageBucket: "gig-goers.appspot.com",
-    };
-    firebase.initializeApp(config);
-
-</script>
-    
 </head>
-
 <body>
-  <script type="text/javascript" src="jascript.js"></script>
+<script type="text/javascript" src="jascript.js"></script>
 	<center>
 		<h1>Sign Up</h1> 
 		
@@ -95,17 +28,12 @@ var config = {
       </div>
       <!-- Button -->
       <div>
-        <center>
-          <button class = "button" id="loginButton" onclick="log();" href="#">Next</button>
 
-        <!-- <a class = "button" onclick= "passCheck()"  href = "file:///C:/Users/codergirl/Documents/surrealism/newgenre.html">Next</a> -->
+        <center><a class = "button" onclick="passCheck()" href="newgenre.html">Next</a>
 
         </center>
       </div>
   </form>
 </center>
-
-
-
 </body>
 </html>

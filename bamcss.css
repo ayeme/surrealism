@@ -1,9 +1,6 @@
 .button{
     background-color: #FF8A56;
-<<<<<<< HEAD
 }
-=======
->>>>>>> 44b02649a4b1783f204397b8c860f92ed93f56b8
 body{
     background-color: #EBEBEB;
 }
@@ -52,12 +49,6 @@ body {
 h3{
     font-size: 15px;
 }
-<<<<<<< HEAD
-=======
-
-h3{
-    font-size: 15px;
-}
 h4{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -66,6 +57,9 @@ img instapic {
     display: block;
     margin: auto;
     width: 40%;
+}
+.nav{
+    background-color:#002d60;
 }
 /*
 makes the buttons pink
@@ -82,9 +76,4 @@ makes the buttons pink
     top:50%;
     left:50%;
     font-family: Arial, Helvetica, sans-serif;
-<<<<<<< HEAD
 }*/
-
-.nav{
-    background-color:#002d60;
-}

@@ -1,5 +1,5 @@
-function passCheck()
-{
+function passCheck(){
+
 	var x = document.getElementById("pass_word").innerHTML;
 	var y = document.getElementById("password_confirm").innerHTML;
 	// if (x.length < 4)
@@ -10,8 +10,7 @@ function passCheck()
 	{
 		alert("Your passwords do not match. Try again.");
 	}
-}
-
+ }
 
 function bandSearch() 
 {

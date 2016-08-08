@@ -23,11 +23,11 @@
 //function uploadPicture(){adsijfopasdjfo
   console.log(url);
   $.getJSON(url, function(response) {
-    alert("EEEE")
     console.log(response);  
 
     console.log(response.data[0].images.standard_resolution.url);
     var html_thing="<div class='col-md-3'>" + "<img src='"+response.data[0].images.standard_resolution.url+"' height='100%' width='100%'> </div>"
+    alert(html_thing)
     //document.getElementById("instapic").src = response.data[0].images.standard_resolution.url;
     document.getElementById("uploadedpic").innerHTML=html_thing
     console.log("HEHEHEH");

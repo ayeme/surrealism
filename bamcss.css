@@ -58,24 +58,15 @@ h3{
 h3{
     font-size: 15px;
 }
->>>>>>> 44b02649a4b1783f204397b8c860f92ed93f56b8
 h4{
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44b02649a4b1783f204397b8c860f92ed93f56b8
 img instapic {
     display: block;
     margin: auto;
     width: 40%;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44b02649a4b1783f204397b8c860f92ed93f56b8
 /*
 makes the buttons pink
 .button{
@@ -93,6 +84,7 @@ makes the buttons pink
     font-family: Arial, Helvetica, sans-serif;
 <<<<<<< HEAD
 }*/
-=======
-}*/
->>>>>>> 44b02649a4b1783f204397b8c860f92ed93f56b8
+
+.nav{
+    background-color:#002d60;
+}

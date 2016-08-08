@@ -31,7 +31,7 @@
 			//var artistName = input.innerHTML;	  // Notice you have to use "%20" instead of a space. It's called double escaped text. Look it up.
 			var url = "http://api.bandsintown.com/artists/" + // This is the base url.
 					  input +							  // Add artist name
-					  "/events/search?app_id=giggoers&api_version=2.0&"+"location="+input_2+","+input_3+"format=json&callback=?" // This is tells BIT who you are (api_id) and what format you want (JSON)
+					  "/events/search?app_id=giggoers&api_version=2.0&"+"location="+input_2+","+input_3+"&format=json&callback=?" // This is tells BIT who you are (api_id) and what format you want (JSON)
 			console.log(url)
 			$.getJSON(url, function(response) {
 				console.log(response);

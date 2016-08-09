@@ -19,11 +19,42 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 	<form onsubmit="createUser()">
 		<input type="text" name="firstname"><br>
 	  	<input type="text" name="lastname"><br>
 	  <input type="submit" value="Submit">
 	</form>
+=======
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+  var access_token = window.location.hash.substr(1);
+  console.log(access_token);
+  var url = "https://api.instagram.com/v1/tags/awesome/recent?"+access_token+"&callback=?";
+  console.log(url);
+  $.getJSON(url, function(data) {
+    console.log(data);
+  });
+</script>
+<!-- nav bar -->
+<nav class = "navbar">
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class = "nav-link" id="login" href = "newmab.html">Login<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class = "nav-link" id="signup" href= "newsignup.html">Sign Up</a>
+    </li>
+    <li>
+      <a class = "nav-link" href = "bandsintown.html" onclick="bandSearch()">Track Concerts Here</a>
+    </li>
+    <li>
+      <a class = "nav-link" href = "newgenre.html">Find Concerts in Your Area</a>
+    </li>
+    <li>
+      <a class = "nav-link" href = "location.html">Discover Bands</a>
+    </li>
+>>>>>>> b5213bc8ffcae908e5ae99756e22f810fb5b46b7
 
 </body>
 

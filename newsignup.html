@@ -1,36 +1,51 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="bamcss.css">
-  <title>Sign Up</title>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-database.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgfOakMt42d8PkYCJ5VZr6E4U8orGdx_M",
+    authDomain: "gig-goers.firebaseapp.com",
+    databaseURL: "https://gig-goers.firebaseio.com",
+    storageBucket: "gig-goers.appspot.com",
+  };
+  firebase.initializeApp(config);
+    console.log("Initialize");
+  </script>
 </head>
 
 <body>
-<script type="text/javascript" src="jascript.js"></script>
-	<center>
-		<h1>Sign Up</h1>		
-    <form class="form-horizontal" action='' method="POST">
+  <form onsubmit="createUser()">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="Submit">
+  </form>
 
-      <!-- E-mail -->
-      <div>
-        <input type="email" id="email" placeholder="E-Mail">
-        <p class="help-block">Please type your E-mail</p>
-      </div>
-      <!-- Password-->
-      <div>
-        <input type="password" id="pass_word" placeholder="Password...">
-        <p>Password should be at least 4 characters</p>
-      </div>
-      <!-- Confirm Password -->
-      <div> 
-        <input type="password" id="password_confirm" placeholder="Confirm Password...">
-        <p>Please confirm password</p>
-      </div>
-      <!-- Button -->
-      <div>
-        <center><a class = "button" onclick="passCheck()" href="https://ayeme.github.io/surrealism/loggedin.html">Next</a></center>
-      </div>
-    </form>
-  </center>
 </body>
+
+  <script type="text/javascript">
+    function createUser() {
+    firebase.auth().createUserWithEmailAndPassword("freddysalinas801@gmail.com", "5Up3rk3wl").then(function(user) {
+        // [END createwithemail]
+        // callSomeFunction(); Optional
+        // var user = firebase.auth().currentUser;
+        console.log(user)       
+    }, function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+            alert('The password is too weak.');
+        } else {
+            console.log(error);
+        }
+        // [END_EXCLUDE]
+    });
+    }
+  </script>
 </html>

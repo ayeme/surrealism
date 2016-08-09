@@ -1,5 +1,10 @@
+.btn-primary{
+    color: black;
+    background-color: #CDB79E;
+    border-color: #CDB79E;
+}
 body{
-    background-color:   #CDB79E;
+    background-color: #CDB79E;
     padding-bottom: 40px;
     padding-top: 60px;
 }

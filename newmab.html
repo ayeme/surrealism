@@ -4,14 +4,28 @@
 	<link rel="stylesheet" type="text/css" href="https://ayeme.github.io/surrealism/bamcss.css">
   <script src="jascript.js"></script>
 	<title>Log In!</title>
-  <script type="text/javascript">
+  <script type="text/javascript"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCgfOakMt42d8PkYCJ5VZr6E4U8orGdx_M",
+    authDomain: "gig-goers.firebaseapp.com",
+    databaseURL: "https://gig-goers.firebaseio.com",
+    storageBucket: "gig-goers.appspot.com",
+  };
+  firebase.initializeApp(config);
+  </script>
+
+ <script type="text/javascript">
   function checkuser(){
-    var p_word=document.getElementById("password").value
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // // Handle Errors here.
+    firebase.auth().signInWithEmailAndPassword(document.getElementById(email).value, document.getElementById(password)).catch(function(error) {
+    // // Handle Err
+    ors here.
     // var errorCode = error.code;
     // var errorMessage = error.message;
   // ...
+  console.log("this works");
 });
     // if (p_word=='hello') {
     //   console.log("is hello")
@@ -20,6 +34,7 @@
     //   window.location.href = '/surrealism/newmab.html';
     // }
   }
+  </script>
   </script>
 </head>
 <body>

@@ -6,13 +6,13 @@
 	<title>Log In!</title>
   <script type="text/javascript">
   function checkuser(){
-    var p_word=document.getElementById("password")
-    alert('eheheheheh')
-    if (p_word=='hello'){
-      alert('pojadsfof!');
-      document.location.pathname = '/loggedin.html';
+    var p_word=document.getElementById("password").value
+    // alert('eheheheheh')
+    if (p_word=='hello') {
+      console.log("is hello")
+      window.location.href = '/surrealism/loggedin.html';
     }else{
-      document.location.pathname = '/newmab.html';
+      window.location.href = '/surrealism/newmab.html';
     }
   }
   </script>
@@ -43,7 +43,7 @@
     <div class="control-group">
       <div class="controls">
         <center>
-          <button class = "button" id="genre" onclick="checkuser();">Log In</button>
+          <button class = "button" id="genre" onclick="checkuser(); return false;">Log In</button>
     </center>
       </div>
     </div>

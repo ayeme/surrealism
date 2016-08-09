@@ -23,13 +23,11 @@
 	{
 
 		input = document.getElementById("userInput").value;
-		input_2=document.getElementById("townname").value;
-		input_3=document.getElementById("state").value;
 		console.log(input)
 		//
 			//var bandInput = bandSearch();
 			//var artistName = input.innerHTML;	  // Notice you have to use "%20" instead of a space. It's called double escaped text. Look it up.
-			var url = "http://api.bandsintown.com/artists/" + // This is the base url.
+			var url = "https://api.bandsintown.com/artists/" + // This is the base url.
 					  input +							  // Add artist name
 					  "/events/recommended?app_id=giggoers&api_version=2.0&"+"location=use_geoip&radius=150"+"&format=json&callback=?" // This is tells BIT who you are (api_id) and what format you want (JSON)
 
@@ -45,7 +43,7 @@
 	  			//document.getElementById("image").src = response.image_url;
 			})
 			var str = "";
-			var eventsURL = "http://api.bandsintown.com/artists/" + 
+			var eventsURL = "https://api.bandsintown.com/artists/" + 
 							input + 
 							"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 			$.getJSON(eventsURL, function(response) {
@@ -56,7 +54,7 @@
 	  			}
 	  			// document.getElementById("demo").innerHTML = str;   			
 			})
-			var locationEvents = "http://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
+			var locationEvents = "https://api.bandsintown.com/events/search?artists[]=Skrillex&location=Boston,MA&radius=10&format=json&app_id=giggoers&callback=?"
 			$.getJSON(locationEvents, function(response) {
 	  			console.log(response);
 	  			//document.getElementById("demo").innerHTML = response[0].formatted_datetime + "<br>" + response[0].formatted_location; 			
@@ -70,9 +68,8 @@
 	<div class="row"> 
 	<div class="col-lg-6">
     <div class="input-group">
+    	<label for="userInput">Artist: </label>
     	<input type="text" class="form-control" placeholder="Search for..." id="userInput">
-      <input type="text" class="form-control" placeholder="Search for..." id="townname">
-      <input type="text" class="form-control" placeholder="Search for..." id="state">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button" onclick="bandSearch()">Go!</button>
       </span>

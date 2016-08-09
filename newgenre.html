@@ -12,10 +12,10 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js" /></script>
 <script type="text/javascript">
-$.(document).ready(function(){
-$.('input[name="all"],input[name="title"]').bind('click', function(){
+$(document).ready(function(){
+$('input[name="all"],input[name="title"]').bind('click', function(){
 var status = $(this).is(':checked');
-$.('input[type="checkbox"]', $(this).parent('li')).attr('checked', status);
+$('input[type="checkbox"]', $(this).parent('li')).attr('checked', status);
 });
 });
 </script>

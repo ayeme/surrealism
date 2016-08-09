@@ -7,21 +7,21 @@
     <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase-database.js"></script>
   <script>
   // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCgfOakMt42d8PkYCJ5VZr6E4U8orGdx_M",
-    authDomain: "gig-goers.firebaseapp.com",
-    databaseURL: "https://gig-goers.firebaseio.com",
-    storageBucket: "gig-goers.appspot.com",
-  };
-  firebase.initializeApp(config);
+    var config = {
+      apiKey: "AIzaSyCgfOakMt42d8PkYCJ5VZr6E4U8orGdx_M",
+      authDomain: "gig-goers.firebaseapp.com",
+      databaseURL: "https://gig-goers.firebaseio.com",
+      storageBucket: "gig-goers.appspot.com",
+    };
+    firebase.initializeApp(config);
     console.log("Initialize");
   </script>
 </head>
 
 <body>
   <form onsubmit="createUser()">
-    <input type="text" name="firstname"><br>
-    <input type="text" name="lastname"><br>
+    <input type="text" id="firstname"><br>
+    <input type="text" id="lastname"><br>
     <input type="submit" value="Submit">
   </form>
 
@@ -29,7 +29,7 @@
 
   <script type="text/javascript">
     function createUser() {
-    firebase.auth().createUserWithEmailAndPassword(document.getElementByName("firstname"), document.getElementByName("lastname")).then(function(user) {
+    firebase.auth().createUserWithEmailAndPassword(document.getElementById("firstname").value, document.getElementById("lastname").value).then(function(user) {
         // [END createwithemail]
         // callSomeFunction(); Optional
         // var user = firebase.auth().currentUser;

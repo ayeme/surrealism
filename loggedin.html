@@ -23,7 +23,7 @@
   console.log(url);
   $.getJSON(url, function(response) {
     console.log(response);  
-    var html_thing="<img src='"+response.data[0].images.standard_resolution.url+"' width='400%' height='400%'>"
+    var html_thing="<img src='"+response.data[0].images.standard_resolution.url+"' width='400px' height='400%'>"
     console.log(response.data[0].images.standard_resolution.url);
     alert("Your image has been uploaded.");
     //document.getElementById("instapic").src = response.data[0].images.standard_resolution.url;

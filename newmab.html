@@ -40,29 +40,14 @@ function checkuser(){
 	<center>		
     <h1>Log In</h1>		
 
-    <form class="form-horizontal" action='' method="POST">
+    <!-- <form class="form-horizontal" action='' method="POST"> -->
+ <form onsubmit="checkUser()">
+    <input type="text" id="email" placeholder="Email"><br><br>
+    <input type="password" id="password" placeholder="Password"><br>
+    <a type="submit" class = "button" href ="loggedin.html" value="Submit">Log-In</a>
+  </form>
+    
 
-    <!-- E-mail -->
-    <label class="control-label" for="email">E-mail</label>
-    <div class="controls">
-      <input type="text" id="email" placeholder="" class="input-xlarge">
-      <p class="help-block"></p>
-    </div>
-
-    <!-- Password -->
-    <div class="control-group">
-      <label class="control-label" for="password">Password</label>
-      <div class="controls">
-        <input type="password" id="password" placeholder="" class="input-xlarge">
-        <p class="help-block"> </p>
-      </div>
-    </div>
-
-    <!-- Button --> 
-    <div class="control-group">
-      <div class="controls">
-        <center>
-          <button class = "button" id="genre" onclick="checkuser(); return true;"><font color = "black">Log In</button>
     </center>
       </div>
     </div>

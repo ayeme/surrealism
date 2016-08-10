@@ -4,7 +4,9 @@
     border-color: #CDB79E;
 }
 .btn-primary:hover{
-    background-color: white;
+    color: black;
+    background-color: #EEE0E5;
+    border-color: #EEE0E5;
 }
 body{
     background-color: #CDB79E;

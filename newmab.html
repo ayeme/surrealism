@@ -19,7 +19,7 @@
 
  <script type="text/javascript">
 function checkuser(){
-    firebase.auth().signInWithEmailAndPassword(document.getElementById("email").value, document.getElementById("password").value).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(document.getElementById("email").value, document.getElementById("password").value ).catch(function(error) {
     // // Handle Errors here.
     // var errorCode = error.code;
     // var errorMessage = error.message;
@@ -62,7 +62,7 @@ function checkuser(){
     <div class="control-group">
       <div class="controls">
         <center>
-          <button class = "button" id="genre" onclick="checkuser(); return false;"><font color = "black">Log In</button>
+          <button class = "button" id="genre" onclick="checkuser()"><font color = "black">Log In</button>
     </center>
       </div>
     </div>

@@ -3,6 +3,9 @@
     background-color: #CDB79E;
     border-color: #CDB79E;
 }
+.btn-primary:hover{
+    background-color: white;
+}
 body{
     background-color: #CDB79E;
     padding-bottom: 40px;

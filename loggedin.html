@@ -23,7 +23,7 @@
   console.log(url);
   $.getJSON(url, function(response) {
     console.log(response);  
-    var html_thing="<img src='"+response.data[0].images.standard_resolution.url+"' width='400px' height='400%'>"
+    var html_thing="<img src='"+response.data[0].images.standard_resolution.url+"' width='100%' height='100%'>"
     console.log(response.data[0].images.standard_resolution.url);
     alert("Your image has been uploaded.");
     //document.getElementById("instapic").src = response.data[0].images.standard_resolution.url;
@@ -42,7 +42,7 @@
   <nav id= "ldi" class= "navbar">
     <ul class="nav navbar-nav">
       <li class="nav-item active">
-        <a class = "nav-link" id="logout" href = "index.html">Log Out<span class="sr-only">(current)</span></a>
+        <a class = "nav-link" id="logout" href = "index.html"><font color = "black">Log Out</font><span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class = "nav-link" id="uploadPictures" href="https://instagram.com/oauth/authorize/?client_id=157c316671b84fe6ab699bc2937f6ad4&redirect_uri=https://ayeme.github.io/surrealism/loggedin.html&response_type=token&scope=basic"><font color = "black">Upload Photo</font></a>

@@ -35,7 +35,7 @@
 	  			document.getElementById("image").src = response.image_url;
 			})
 			var str = "";
-			var eventsURL = "http://api.bandsintown.com/artists/" + 
+			var eventsURL = "https://api.bandsintown.com/artists/" + 
 							input + 
 							"/events.json?app_id=giggoers&api_version=2.0&format=json&callback=?" // Notice how this now has "/events.json"
 			$.getJSON(eventsURL, function(response) {

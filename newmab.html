@@ -23,9 +23,9 @@ function checkuser(){
     // // Handle Errors here.
      var errorCode = error.code;
      var errorMessage = error.message;
-      if (errorCode == 'auth/wrong-password') {
+      if (errorCode == 'auth/wrong-password' || errorMessage == 'auth/wrong-password') {
             alert('The password is too weak.');
-      } else if (errorCode == 'auth/user-not-found') {
+      } else if (errorCode == 'auth/user-not-found' || errorMessage == 'auth/user-not-found') {
            alert('This user does not exist. Please sign up.');
       }
   // ...

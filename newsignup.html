@@ -26,7 +26,7 @@
   <form onsubmit="createUser()">
     <input type="text" id="firstname"><br>
     <input type="text" id="lastname"><br>
-    <a type="submit" href ="loggedin.html" value="Submit">Submit</a>
+    <a type="submit"  href="javascript: createUser()" value="Submit">Submit</a>
   </form>
 
 </body>
@@ -38,7 +38,8 @@
         // [END createwithemail]
         // callSomeFunction(); Optional
         // var user = firebase.auth().currentUser;
-        console.log(user)       
+        console.log(user) 
+        window.location.href = "loggedin.html"      
     }, function(error) {
         // Handle Errors here.
         var errorCode = error.code;
